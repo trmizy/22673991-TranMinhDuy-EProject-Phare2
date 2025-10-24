@@ -91,7 +91,7 @@ class ProductController {
       res.status(500).json({ message: "Server error" });
     }
   }
-  async getProductById(req,req){
+  async getProductById(req,res){
     try {
       const { id } = req.params;
       const products = await this.productService.getProductById(id);
